@@ -6,7 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 
-OUTPUT_PATH = "C:\\Users\\droma\\Desktop\\Code\\tasks\\sillicium\\pytestProject\\output\\"
 FIRST_NAME = "autotest1"
 LAST_NAME = "autotest2"
 EMAIL = "some@email.com"
@@ -151,4 +150,5 @@ def test_registration_form():
     assert state_and_city == 'NCR Delhi'
 
     # saving screenshot
-    driver.save_screenshot(OUTPUT_PATH + 'test_registration_form.png')
+    driver.save_screenshot(os.path.abspath('output/test_registration_form.png'))
+
