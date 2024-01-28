@@ -1,6 +1,8 @@
 import pytest
 from selenium import webdriver
 
+from utils.test_data import TestData
+
 
 @pytest.fixture()
 def init_driver(request):
@@ -11,6 +13,7 @@ def init_driver(request):
     # opening page
     driver = webdriver.Chrome(options=options)
     request.cls.driver = driver
+    driver.maximize_window()
+    driver.get(TestData.url)
     yield
     driver.close()
-
