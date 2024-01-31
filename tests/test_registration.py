@@ -1,3 +1,4 @@
+import allure
 import pytest
 
 from pages.registration_page import RegistrationPage
@@ -7,6 +8,7 @@ from utils.test_data import TestData
 
 class TestRegistration(BaseTest):
     @pytest.mark.reg_test()
+    @allure.description("In this test we fill fields in registration form, and then validate values in modal window")
     def test_registration_form(self):
         registration_page = RegistrationPage(self.driver)
 
