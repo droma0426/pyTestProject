@@ -6,7 +6,7 @@ from utils.test_data import TestData
 
 
 class TestRegistration(BaseTest):
-    @pytest.mark.reg_tests()
+    @pytest.mark.reg_test()
     def test_registration_form(self):
         registration_page = RegistrationPage(self.driver)
 
