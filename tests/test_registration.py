@@ -38,6 +38,7 @@ class TestRegistration(BaseTest):
 
         registration_modal = registration_page.submit_registration(2)
 
+        registration_modal.check_modal_title(TestData.modal_title)
         registration_modal.check_name(TestData.first_name + ' ' + TestData.second_name)
         registration_modal.check_email(TestData.email)
         registration_modal.check_gender(TestData.gender)

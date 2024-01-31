@@ -59,7 +59,7 @@ class RegistrationPage(BasePage):
         self.click(self.locate.state_field_field)
         self.click(self.locate.get_state_option_field_selector(state), timeout=timeout)
 
-    @allure.step("Choosing state")
+    @allure.step("Choosing city")
     def set_city(self, city, timeout):
         self.click(self.locate.city_field_field)
         self.click(self.locate.get_city_option_field_selector(city), timeout=timeout)

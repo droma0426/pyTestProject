@@ -3,6 +3,7 @@ import os
 
 class TestData:
     url = 'https://demoqa.com/automation-practice-form'
+    modal_title = 'Thanks for submitting the form'
     email = "some@email.com"
     mobile_number = "0123456789"
     first_name = "autotest1"
